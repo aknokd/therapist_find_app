@@ -4,4 +4,9 @@ Rails.application.routes.draw do
     passwords: 'users/passwords',
     registrations: 'users/registrations'
   }
+  devise_for :therapists, controllers: {
+    sessions: 'therapists/sessions',
+    passwords: 'therapists/passwords',
+    registrations: 'therapists/registrations'
+  }
 end

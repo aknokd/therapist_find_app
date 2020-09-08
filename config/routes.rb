@@ -9,4 +9,6 @@ Rails.application.routes.draw do
     passwords: 'therapists/passwords',
     registrations: 'therapists/registrations'
   }
+  root "products#index"
+  resources :products, only: :index
 end

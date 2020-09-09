@@ -33,6 +33,29 @@
   </div>
 
   <div class='therapist-contents'>
+    <h2 class="title">セラピスト一覧</h2>
+    <ul class="therapist-lists">
+      <% @products.each do |product| %>
+        <li class="list">
+          <%= link_to "/products/#{product.id}" do %>
+            <div class='therapist-img-content'>
+              <%= image_tag product.image, class: "therapist-img" if product.image.attached? %>
+            </div>
+            <div class="therapist-info">
+              <h3 class="therapist-name">
+                <%= product.therapist.name %>
+              </h3>
+              <div class="therapist-qualification">
+                <span><%= product.qualification[:name] %></span>
+              </div>
+              <div class="therapist-price">
+                <span><%= product.price %>円〜<br></span>
+              </div>
+            </div>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
   </div>
 
 

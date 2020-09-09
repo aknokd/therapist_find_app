@@ -1,0 +1,41 @@
+<%= render "shared/header" %>
+
+<div class="products">
+  <div class="product-box">
+    <h2 class="name">
+      <%= @product.therapist.name %>
+    </h2>
+
+    <div class='therapist-img-content'>
+      <%= image_tag @product.image, class: "therapist-img" if @product.image.attached? %>
+    </div>
+
+    <div class='qualification'>
+      <h4>持っている資格</h4>
+      <%= @product.qualification[:name] %>
+    </div>
+
+    <div class='prefecture'>
+      <h4>活動している地域</h4>
+      <%= @product.prefecture[:name] %>
+    </div>
+
+    <div class='self-introduction'>
+      <h4>自己紹介</h4>
+      <%= @product.self_introduction %>
+    </div>
+
+    <%# <div class='reservation'>
+      <%= link_to '予約する', therapist_profile_reservations_path(@product.id), class:"reservation-btn" if current_user != @product.therapist_id %>
+    <%# </div> %> 
+
+    <div class='edit-link'></div>
+      <% if therapist_signed_in? && current_therapist.id == @product.therapist_id %>
+        <%= link_to 'プロフィールの編集', edit_product_path(@product.id), method: :get, class: "product-edit-btn" %>
+        <p class='or-text'>or</p>
+        <%= link_to '削除', product_path(@product.id), method: :delete, class:'product-destroy' %>
+      <% end %>
+    </div>
+
+  </div>
+</div>

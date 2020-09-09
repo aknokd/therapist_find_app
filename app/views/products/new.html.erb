@@ -1,0 +1,37 @@
+<%= render "shared/header" %>
+
+<div class="products">
+  <h2 class="product-title">セラピスト情報を入力</h2>
+    <%= form_with model: @product, local: true do |f| %>
+      <div class="product-main">
+        <div class="weight-bold-text">
+          持っている資格
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:qualification_id, Qualification.all, :id, :name, {}, {class: "select-box", id: "qualification"}) %>
+
+        <div class="weight-bold-text">
+          主に活動している場所
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
+
+        <div class="weight-bold-text">
+          施術料金
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_field :price, class: "price-input", id: "price", placeholder: "例)3000" %>
+
+        <div class="weight-bold-text">
+          自己紹介
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :self_introduction, class:"self-introduction", id:"therapist-info", placeholder:"自己紹介（必須 1,000文字まで）例）初めまして！丁寧な治療を心がけております、よろしくお願い致します。" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+
+      <div class="commit-btn-contents">
+        <%= f.submit "登録する" ,class:"commit-btn" %>
+        <%=link_to 'もどる', root_path, class:"back-btn" %>
+      </div>
+    <% end %>
+</div>

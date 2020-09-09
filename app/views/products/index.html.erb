@@ -1,0 +1,48 @@
+<%= render "shared/header" %>
+
+<div class='main'>
+
+  <div class='service-title-contents'>
+    <h2 class='service-title'>
+      FIND YOUR THERAPIST
+    </h2>
+    <p class='servise-subtitle'>
+      あなたにぴったりなセラピストを探せます
+    </p>
+  </div>
+
+  <div class='explain-contents'>
+    <h3 class='explain-title'>
+      専属のセラピスト、見つけませんか？
+    </h3>
+    <p class='explain-content'>
+      「治療を受けたいけど、仕事が終わるのが遅い」
+    </p>
+    <p class='explain-content'>
+      「自分の行ける日に接骨院がやっていない」
+    </p>
+    <p class='explain-content'>
+      そんな方のために、自分の都合の良い日に合わせてセラピストを呼べる
+    </p>
+    <p class='explain-content'>
+      新しいサービスが誕生しました。
+    </p>
+    <p class='explain-content'>
+      あなただけの専属セラピストを見つけられます。
+    </p>
+  </div>
+
+  <div class='therapist-contents'>
+  </div>
+
+
+
+  <h3>セラピスト</h3>
+  <% if therapist_signed_in? %>
+    <%= link_to "ログアウト", destroy_therapist_session_path, method: :delete %>
+  <% else %>
+    <%= link_to "新規登録", new_therapist_registration_path %>
+    <%= link_to "ログイン", new_therapist_session_path %>
+  <% end %>
+
+</div>

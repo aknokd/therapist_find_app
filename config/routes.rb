@@ -10,5 +10,5 @@ Rails.application.routes.draw do
     registrations: 'therapists/registrations'
   }
   root "products#index"
-  resources :products, only: [:index, :new, :create]
+  resources :products
 end

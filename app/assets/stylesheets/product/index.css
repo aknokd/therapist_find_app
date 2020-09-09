@@ -10,5 +10,25 @@
   background-color: lightpink;
 }
 
-.therapist-contents{
+.therapist-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.therapist-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.list {
+  background-color: blanchedalmond;
+}
+
+.therapist-img {
+  width: 20vh;
+  height: 20vh;
 }

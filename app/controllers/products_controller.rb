@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   def index
+    @products = Product.all.includes(:therapist).order('created_at DESC')
   end
 
   def new
@@ -16,10 +17,14 @@ class ProductsController < ApplicationController
     end
   end
 
+  def show
+    @product = Product.find(params[:id])
+  end
+
   private
 
   def product_params
-    params.require(:product).permit(:qualification_id, :prefecture_id, :self_introduction,
+    params.require(:product).permit(:image, :qualification_id, :prefecture_id, :self_introduction,
                                     :price).merge(therapist_id: current_therapist.id)
   end
 end

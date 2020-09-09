@@ -4,6 +4,18 @@
   <h2 class="product-title">セラピスト情報を入力</h2>
     <%= form_with model: @product, local: true do |f| %>
       <div class="product-main">
+        <div class="img-upload">
+          <div class="weight-bold-text">
+            プロフィール画像
+            <span class="indispensable">必須</span>
+          </div>
+          <div class="click-upload">
+            <p>
+              クリックしてファイルをアップロード
+            </p>
+            <%= f.file_field :image, name: 'product[image]', id: "image", multiple: true %>
+          </div>
+        </div>
         <div class="weight-bold-text">
           持っている資格
           <span class="indispensable">必須</span>

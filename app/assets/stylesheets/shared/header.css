@@ -1,7 +1,8 @@
 .header {
   height: 50px;
-  background-color: lightgray;
+  background-color: white;
   padding: 10px 0;
+  border-bottom: dimgray 1px solid;
   display: flex;
 }
 
@@ -10,19 +11,19 @@ li {
 }
 
 .heading-left {
-  width: 50%;
+  width: 40%;
   padding: 5px 0 0 50px;
 }
 
-.title {
+.app-title {
   text-decoration: none;
   color: black;
-  font-size: 1.2em;
-  font-weight: bold;
+  font-size: 1.3em;
+
 }
 
 .heding-right {
-  width: 50%;
+  width: 60%;
 }
 
 .navbar {
@@ -31,16 +32,24 @@ li {
 
 .nav-lists {
   display: flex;
-  /* justify-content: space-around; */
+  justify-content: flex-end;
+}
+
+.user-information {
+  padding-top: 10px;
+  padding-right: 15px;
+  font-size: small;
   justify-content: flex-end;
 }
 
 .heading-right-list{
-  display: inline-block;
   text-decoration: none;
-  color: black;
-  font-size: 1.2em;
-  font-weight: bold;
-  padding: 5px 15px;
-  margin-right: 40px;
+  display: inline-block;
+  background-color: coral;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.1em;
+  /* font-weight: bold; */
+  padding: 5px 20px;
+  margin-right: 20px;
 }

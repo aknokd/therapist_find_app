@@ -3,11 +3,40 @@
 }
 
 .service-title-contents {
-  background-color: lightyellow;
+  background: url('/images/1119024_m.jpg') no-repeat center center;;
+  background-size: cover;
+  height: 600px;
+  border-bottom: dimgray 1px solid;
+}
+
+.service-title {
+  padding: 90px 0 0;
+  font-weight: bold;
+  font-family: 'Corben', cursive;
+  font-size: 45px;
+}
+
+.service-subtitle {
+  font-size: 20px;
 }
 
 .explain-contents {
-  background-color: lightpink;
+  padding: 50px 0;
+  color: dimgrey;
+}
+
+.explain-title {
+  font-size: 25px;
+  padding-bottom: 30px;
+  font-weight: bold;
+}
+
+.explain-content {
+  padding: 5px 0;
+}
+
+.reaf-line {
+  width: 70vw;
 }
 
 .therapist-contents {
@@ -15,6 +44,12 @@
   flex-direction: column;
   align-items: center;
   padding: 10vh 0;
+  color: dimgrey;
+}
+
+.therapist-content-title {
+  font-size: 30px;
+  padding-bottom: 30px;
 }
 
 .therapist-lists {
@@ -25,10 +60,29 @@
 }
 
 .list {
+  padding: 10px;
   background-color: blanchedalmond;
+  border: dimgrey 1px solid;
+  margin: 10px;
 }
 
+.therapist-list {
+  text-decoration: none;
+  color: dimgrey;
+}
 .therapist-img {
   width: 20vh;
   height: 20vh;
 }
+
+.therapist-info {
+}
+
+.therapist-name {
+  font-size: 20px;
+}
+
+.therapist-qualification {
+  font-size: 15px;
+}
+

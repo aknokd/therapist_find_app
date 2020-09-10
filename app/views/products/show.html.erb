@@ -37,6 +37,8 @@
     </div>
   </div>
   <div class='reservation'>
-    <%= link_to '予約する', product_reservations_path(@product.id), class:"reservation-btn" %>
+    <% unless therapist_signed_in? %>
+      <%= link_to '予約する', product_reservations_path(@product.id), class:"reservation-btn" %>
+    <% end %>
   </div>
 </div>

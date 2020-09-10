@@ -5,6 +5,7 @@
       <ul class="fotter-navbar">
         <span class="user-information">施術者の方はこちら</span>
         <% if therapist_signed_in? %>
+          <%= link_to "プロフィール作成", new_product_path, class: "footer-left-list" %>
           <%= link_to "ログアウト", destroy_therapist_session_path, method: :delete, class: "footer-left-list" %>
         <% else %>
           <%= link_to "新規登録", new_therapist_registration_path, class: "footer-left-list" %>

@@ -1,0 +1,10 @@
+.login-blue-btn {
+  width: 100%;
+  background: skyblue;
+  border: 1px solid skyblue;
+  border-radius: 10px;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}

@@ -1,17 +1,17 @@
 <header class='header'>
   <div class='heading-left'>
-    <h1 class="title"><li><%= link_to 'THERAPIST FIND APP', root_path, class: "title"%></li></h1>
+    <h1 class="title"><li><%= link_to 'THERAPIST FIND APP', root_path, class: "app-title"%></li></h1>
   </div>
   <div class="heding-right">
     <div class="navbar">
       <% unless therapist_signed_in? %>
       <ul class="nav-lists">
+        <span class="user-information">利用者の方はこちら</span>
         <% if user_signed_in? %>
-          <li class="heading-right-list"><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
-          <li class="heading-right-list"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "heading-right-list" %></li>
         <% else %>
-          <li class="heading-right-list"><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-          <li class="heading-right-list"><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+          <li><%= link_to 'ログイン', new_user_session_path, class: "heading-right-list" %></li>
+          <li><%= link_to '新規登録', new_user_registration_path, class: "heading-right-list" %></li>
         <% end %>
       </ul>
       <% end %>

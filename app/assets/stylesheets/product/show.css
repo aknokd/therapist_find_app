@@ -1,0 +1,73 @@
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px 100px 0 100px;
+  height: 100%;
+}
+
+.show-therapist-img {
+  width: 40vh;
+  height: 50vh;
+  margin-bottom: 10px;
+}
+
+.edit-link {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-edit-btn {
+  text-align: center;
+  background-color: lightseagreen;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #FFF;
+  margin: 20px 0px;
+  padding: 25px 20px;
+}
+
+.product-destroy {
+  text-align: center;
+  background-color: lightseagreen;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+  margin: 20px 0px;
+  padding: 25px 20px;
+}
+
+.product-box {
+  width: 100%;
+  color: dimgray;
+  text-align: center;
+}
+
+.info-text {
+  margin-bottom: 5px;
+}
+
+.therapist-information {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.reservation {
+  margin: 0 auto;
+}
+
+.reservation-btn {
+  text-decoration: none;
+  background: palevioletred;
+  border: 1px solid palevioletred;
+  border-radius: 10px;
+  padding: 20px 50px;
+  color: #fff;
+  line-height: 100px;
+  font-size: 14px;
+  cursor: pointer;
+}

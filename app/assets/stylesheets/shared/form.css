@@ -1,0 +1,29 @@
+.products-main {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.weight-bold-text {
+  margin: 10px 0;
+}
+
+.select-image {
+  text-align: center;
+}
+
+.commit-btn-contents {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.commit-btn {
+  width: 100%;
+  background: coral;
+  border: 1px solid coral;
+  border-radius: 10px;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}

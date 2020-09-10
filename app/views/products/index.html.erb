@@ -4,13 +4,12 @@
 
   <div class='service-title-contents'>
     <h2 class='service-title'>
-      FIND YOUR THERAPIST
+      FIND YOUR THERAPIST ...
     </h2>
-    <p class='servise-subtitle'>
-      あなたにぴったりなセラピストを探せます
+    <p class='service-subtitle'>
+      〜 あなたにぴったりなセラピストを探せます 〜
     </p>
   </div>
-
   <div class='explain-contents'>
     <h3 class='explain-title'>
       専属のセラピスト、見つけませんか？
@@ -31,22 +30,24 @@
       あなただけの専属セラピストを見つけられます。
     </p>
   </div>
+  
+  <%= image_tag '/images/reaf.png', class: "reaf-line" %>
 
   <div class='therapist-contents'>
-    <h2 class="title">セラピスト一覧</h2>
+    <h2 class="therapist-content-title">【セラピスト一覧】</h2>
     <ul class="therapist-lists">
       <% @products.each do |product| %>
         <li class="list">
-          <%= link_to "/products/#{product.id}" do %>
+          <%= link_to "/products/#{product.id}", class: "therapist-list" do %>
             <div class='therapist-img-content'>
               <%= image_tag product.image, class: "therapist-img" if product.image.attached? %>
             </div>
-            <div class="therapist-info">
+            <div class="therapist-informations">
               <h3 class="therapist-name">
                 <%= product.therapist.name %>
               </h3>
               <div class="therapist-qualification">
-                <span><%= product.qualification[:name] %></span>
+                <span>( <%= product.qualification[:name] %> )</span>
               </div>
               <div class="therapist-price">
                 <span><%= product.price %>円〜<br></span>
@@ -58,14 +59,6 @@
     </ul>
   </div>
 
-
-
-  <h3>セラピスト</h3>
-  <% if therapist_signed_in? %>
-    <%= link_to "ログアウト", destroy_therapist_session_path, method: :delete %>
-  <% else %>
-    <%= link_to "新規登録", new_therapist_registration_path %>
-    <%= link_to "ログイン", new_therapist_session_path %>
-  <% end %>
-
 </div>
+
+<%= render "shared/footer" %>

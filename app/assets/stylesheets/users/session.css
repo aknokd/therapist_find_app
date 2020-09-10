@@ -1,0 +1,39 @@
+.registration-main {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.form-header-text {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.form-text-wrap {
+  margin-bottom: 10px;
+}
+
+.indispensable {
+  color: red;
+}
+
+.input-default {
+  width: 40%;
+  margin-bottom: 10px;
+}
+
+.login-btn {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.login-red-btn {
+  width: 100%;
+  background: coral;
+  border: 1px solid coral;
+  border-radius: 10px;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}

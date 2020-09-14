@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :redirect_root, only: [:edit, :update, :destroy]
   before_action :authenticate_therapist!, except: [:index, :show]
   before_action :ensure_correct_therapist, only: [:edit, :update, :destroy]
 
@@ -54,5 +55,9 @@ class ProductsController < ApplicationController
   def ensure_correct_therapist
     @product = Product.find(params[:id])
     redirect_to root_path if current_therapist.id != @product.therapist.id
+  end
+
+  def redirect_root
+    redirect_to root_path if user_signed_in?
   end
 end

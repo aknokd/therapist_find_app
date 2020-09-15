@@ -4,17 +4,17 @@ class ProductReservation
                 :building_name, :phone_number, :product_id, :user_id, :datetime
 
   with_options presence: true do
+    validates :datetime
     validates :full_name
     validates :full_name_kana
     validates :gender
     validates :age
-    validates :prefecture_id
+    validates :prefecture_id,  numericality: { other_than: 0 }
     validates :city
     validates :address
     validates :phone_number
     validates :product_id
     validates :user_id
-    validates :datetime
   end
 
   def save

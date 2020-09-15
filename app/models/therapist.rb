@@ -5,4 +5,14 @@ class Therapist < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :product
+
+  with_options presence: true do
+    validates :name
+    validates :name_kana
+    validates :email,                 uniqueness: { case_sensitive: true }
+    validates :password,              confirmation: true
+    validates :password_confirmation
+    validates :gender
+    validates :birthday
+  end
 end

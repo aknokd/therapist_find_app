@@ -5,4 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          
   has_many :reservations
+
+  with_options presence: true do
+    validates :nickname
+    validates :email,                 uniqueness: { case_sensitive: true }
+    validates :password,              confirmation: true
+    validates :password_confirmation
+  end
 end

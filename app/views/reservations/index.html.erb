@@ -22,6 +22,9 @@
     </div>
 
     <%= form_with url: product_reservations_path, id: "reservation-form", class: "reservation-form-wrap", local: true do |f|  %>
+
+    <%= render 'shared/error_messages', model: @reservation %>
+
       <div class="form-group">
         <div class="form-text-wrap">
           <label class="form-text">▼ 日時選択</label>

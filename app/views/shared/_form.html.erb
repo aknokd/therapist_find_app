@@ -1,4 +1,7 @@
 <%= form_with model: @product, class: 'products-main', local: true do |f| %>
+
+  <%= render 'shared/error_messages', model: @product %>
+
   <div class="product-main">
     <div class="img-upload">
       <div class="weight-bold-text">

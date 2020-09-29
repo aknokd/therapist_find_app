@@ -2,9 +2,12 @@
 
 <div class="reservation-contents">
   <div class="reservation-main">
-      <h1 class="reservation-title-text">
-        予約内容の確認
-      </h1>
+
+    <% breadcrumb :reservations, @product %>
+
+    <h1 class="reservation-title-text">
+      予約内容の確認
+    </h1>
     <div class="reservation-information">
       <div class="therapist-info">
         <%= image_tag @product.image, class: "reserve-therapist-img" if @product.image.attached? %>
@@ -108,3 +111,5 @@
     <% end %>
   </div>
 </div>
+
+<%= render "shared/footer" %>

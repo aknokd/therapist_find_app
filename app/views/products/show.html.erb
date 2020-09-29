@@ -6,6 +6,8 @@
       <%= image_tag @product.image, class: "show-therapist-img" if @product.image.attached? %>
     </div>
 
+    <% breadcrumb :products, @product %>
+
     <div class='edit-link'>
       <% if therapist_signed_in? && current_therapist.id == @product.therapist_id %>
         <%= link_to 'プロフィールを編集', edit_product_path(@product.id), method: :get, class: "product-edit-btn" %>
@@ -42,3 +44,5 @@
     <% end %>
   </div>
 </div>
+
+<%= render "shared/footer" %>
